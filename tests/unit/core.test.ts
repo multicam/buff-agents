@@ -12,7 +12,7 @@ import {
     userMessage,
     assistantMessage,
     systemMessage,
-} from '../../src/core'
+} from '@/core'
 
 describe('AgentBuilder', () => {
     it('should create a basic agent', () => {

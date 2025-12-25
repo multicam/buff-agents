@@ -4,7 +4,7 @@
  * A basic agent for Phase 1 testing that can read and edit files.
  */
 
-import { createAgent } from '../core/agent-builder'
+import { createAgent } from '@/core'
 
 export const simpleEditor = createAgent({
     id: 'simple-editor',

@@ -4,8 +4,8 @@
  * Unified interface for LLM providers with AsyncIterable streaming.
  */
 
-import type { Message, ToolCall } from '../core/types'
-import type { LLMToolDefinition } from '../tools/types'
+import type { Message, ToolCall } from '@/core'
+import type { LLMToolDefinition } from '@/tools'
 
 export interface LLMProvider {
     readonly name: string

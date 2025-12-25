@@ -3,8 +3,8 @@
  */
 
 import { describe, it, expect } from 'bun:test'
-import { expireMessages, truncateMessages, estimateTokens } from '../../src/runtime/messages'
-import { userMessage, assistantMessage, systemMessage } from '../../src/core/types/messages'
+import { expireMessages, truncateMessages, estimateTokens } from '@/runtime/messages'
+import { userMessage, assistantMessage, systemMessage } from '@/core/types/messages'
 
 describe('expireMessages', () => {
     it('should expire messages with matching TTL', () => {

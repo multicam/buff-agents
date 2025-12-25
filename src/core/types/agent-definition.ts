@@ -5,8 +5,8 @@
  * Agents are created via functional composition (builder pattern).
  */
 
-import type { Message } from './messages'
-import type { Logger } from '../../utils/logger'
+import type { Message } from '@/core'
+import type { Logger } from '@/utils'
 
 export interface AgentDefinition {
     id: string

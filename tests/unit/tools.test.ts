@@ -3,9 +3,9 @@
  */
 
 import { describe, it, expect } from 'bun:test'
-import { ToolRegistry } from '../../src/tools/registry'
-import { defineTool } from '../../src/tools/types'
-import { builtinTools } from '../../src/tools/builtin'
+import { ToolRegistry } from '@/tools/registry'
+import { defineTool } from '@/tools/types'
+import { builtinTools } from '@/tools/builtin'
 
 describe('ToolRegistry', () => {
     it('should register and retrieve tools', () => {

@@ -20,7 +20,7 @@ import type {
     JsonSchema,
     ModelIdentifier,
     OutputMode,
-} from './types/agent-definition'
+} from '@/core/types'
 
 export interface AgentBase {
     id: string

@@ -4,13 +4,13 @@
  * Main entry point for running agents.
  */
 
-import type { AgentDefinition, AgentState } from '../core/types'
-import { createInitialState } from '../core/types'
-import type { LLMRegistry } from '../llm/registry'
-import type { ToolRegistry } from '../tools/registry'
-import type { ProjectContext } from '../tools/types'
-import type { Logger } from '../utils/logger'
-import { defaultLogger } from '../utils/logger'
+import type { AgentDefinition, AgentState } from '@/core'
+import { createInitialState } from '@/core'
+import type { LLMRegistry } from '@/llm'
+import type { ToolRegistry } from '@/tools'
+import type { ProjectContext } from '@/tools'
+import type { Logger } from '@/utils'
+import { defaultLogger } from '@/utils'
 import type { RuntimeEvent } from './events'
 import { runStepLoop, type AgentOutput } from './step-loop'
 

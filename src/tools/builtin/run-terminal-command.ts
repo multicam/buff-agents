@@ -6,7 +6,7 @@
 
 import { spawn } from 'child_process'
 import { join, isAbsolute } from 'path'
-import { defineTool } from '../types'
+import { defineTool } from '@/tools'
 
 export interface RunTerminalCommandInput {
     command: string
