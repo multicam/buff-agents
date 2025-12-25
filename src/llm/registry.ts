@@ -68,6 +68,18 @@ export async function createLLMRegistry(config: LLMRegistryConfig): Promise<LLMR
         registry.register(createAnthropicProvider(config.anthropic))
     }
 
+    if (config.openai?.apiKey) {
+        const { createOpenAIProvider } = await import('./providers/openai')
+        registry.register(createOpenAIProvider(config.openai))
+    }
+
+    if (config.openrouter?.apiKey) {
+        const { createOpenRouterProvider } = await import('./providers/openrouter')
+        const provider = createOpenRouterProvider(config.openrouter)
+        registry.register(provider)
+        registry.setFallback(provider)
+    }
+
     return registry
 }
 

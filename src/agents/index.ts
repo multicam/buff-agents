@@ -1,1 +1,6 @@
 export { simpleEditor } from './simple-editor'
+export { orchestrator } from './orchestrator'
+export { fileExplorer } from './file-explorer'
+export { codeReviewer } from './code-reviewer'
+export { openaiEditor } from './openai-editor'
+export { openrouterEditor } from './openrouter-editor'
