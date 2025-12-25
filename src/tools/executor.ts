@@ -5,10 +5,10 @@
  * Returns errors as results (retry with feedback pattern).
  */
 
-import type { ToolCall, ToolMessage } from '../core/types'
-import { toolMessage } from '../core/types'
-import type { AgentState } from '../core/types/agent-definition'
-import type { Logger } from '../utils/logger'
+import type { ToolCall, ToolMessage } from '@/core'
+import { toolMessage } from '@/core'
+import type { AgentState } from '@/core'
+import type { Logger } from '@/utils'
 import type { ToolRegistry } from './registry'
 import type { ToolDefinition, ToolEvent, ToolExecutionContext, ToolResult, ProjectContext } from './types'
 

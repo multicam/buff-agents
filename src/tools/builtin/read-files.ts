@@ -6,7 +6,7 @@
 
 import { readFile } from 'fs/promises'
 import { join, isAbsolute } from 'path'
-import { defineTool } from '../types'
+import { defineTool } from '@/tools'
 
 export interface ReadFilesInput {
     paths: string[]

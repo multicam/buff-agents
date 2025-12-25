@@ -6,7 +6,7 @@
 
 import { writeFile, mkdir } from 'fs/promises'
 import { join, isAbsolute, dirname } from 'path'
-import { defineTool } from '../types'
+import { defineTool } from '@/tools'
 
 export interface WriteFileInput {
     path: string

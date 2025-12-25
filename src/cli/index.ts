@@ -6,14 +6,14 @@
  */
 
 import { Command } from 'commander'
-import { loadConfig } from '../config/loader'
-import { createLLMRegistry } from '../llm/registry'
-import { ToolRegistry } from '../tools/registry'
-import { builtinTools } from '../tools/builtin'
-import { createAgentRuntime } from '../runtime/agent-runtime'
-import { simpleEditor } from '../agents/simple-editor'
-import { createLogger } from '../utils/logger'
-import type { RuntimeEvent } from '../runtime/events'
+import { loadConfig } from '@/config'
+import { createLLMRegistry } from '@/llm'
+import { ToolRegistry } from '@/tools'
+import { builtinTools } from '@/tools/builtin'
+import { createAgentRuntime } from '@/runtime'
+import { simpleEditor } from '@/agents'
+import { createLogger } from '@/utils'
+import type { RuntimeEvent } from '@/runtime'
 
 const program = new Command()
 

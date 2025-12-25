@@ -19,7 +19,7 @@ import { listDirectoryTool } from './list-directory'
 import { runTerminalCommandTool } from './run-terminal-command'
 import { setOutputTool } from './set-output'
 import { endTurnTool } from './end-turn'
-import type { ToolDefinition } from '../types'
+import type { ToolDefinition } from '@/tools'
 
 export const builtinTools: ToolDefinition<any>[] = [
     readFilesTool,

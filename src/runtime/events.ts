@@ -4,9 +4,9 @@
  * Events emitted during agent execution for observability.
  */
 
-import type { ToolCall } from '../core/types'
-import type { ToolEvent } from '../tools/types'
-import type { TokenUsage } from '../llm/types'
+import type { ToolCall } from '@/core'
+import type { ToolEvent } from '@/tools'
+import type { TokenUsage } from '@/llm'
 
 export type RuntimeEvent =
     | StepStartEvent

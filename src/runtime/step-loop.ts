@@ -14,7 +14,7 @@
 import type {
     AgentDefinition,
     AgentState,
-} from '../core/types'
+} from '@/core'
 import {
     addMessage,
     addMessages,
@@ -22,13 +22,13 @@ import {
     decrementSteps,
     setOutput,
     updateState,
-} from '../core/types'
-import { assistantMessage, systemMessage, userMessage } from '../core/types/messages'
-import type { LLMRegistry } from '../llm/registry'
-import type { ToolRegistry } from '../tools/registry'
-import { executeTools } from '../tools/executor'
-import type { ProjectContext, ToolEvent } from '../tools/types'
-import type { Logger } from '../utils/logger'
+} from '@/core'
+import { assistantMessage, systemMessage, userMessage } from '@/core/types/messages'
+import type { LLMRegistry } from '@/llm'
+import type { ToolRegistry } from '@/tools'
+import { executeTools } from '@/tools/executor'
+import type { ProjectContext, ToolEvent } from '@/tools'
+import type { Logger } from '@/utils'
 import type { RuntimeEvent } from './events'
 import { expireMessages } from './messages'
 import { runProgrammaticStep, createStepGenerator } from './programmatic-step'

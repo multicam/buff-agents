@@ -7,7 +7,7 @@
  */
 
 import type { LLMProvider, LLMProviderConfig } from './types'
-import type { ModelIdentifier } from '../core/types'
+import type { ModelIdentifier } from '@/core'
 
 export class LLMRegistry {
     private providers = new Map<string, LLMProvider>()

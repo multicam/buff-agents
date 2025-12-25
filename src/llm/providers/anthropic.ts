@@ -5,7 +5,7 @@
  */
 
 import Anthropic from '@anthropic-ai/sdk'
-import type { Message, ToolCall } from '../../core/types'
+import type { Message, ToolCall } from '@/core'
 import type {
     LLMProvider,
     LLMProviderConfig,

@@ -4,7 +4,7 @@
  * Explicitly end the agent's turn.
  */
 
-import { defineTool } from '../types'
+import { defineTool } from '@/tools'
 
 export interface EndTurnInput {
     message?: string

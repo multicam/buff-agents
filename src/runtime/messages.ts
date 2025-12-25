@@ -4,7 +4,7 @@
  * Smart truncation with TTL tags for context management.
  */
 
-import type { Message, MessageTTL } from '../core/types'
+import type { Message, MessageTTL } from '@/core'
 
 export function expireMessages(
     messages: readonly Message[],

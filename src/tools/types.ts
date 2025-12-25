@@ -5,8 +5,8 @@
  * Tools return simple string/JSON results.
  */
 
-import type { AgentState, JsonSchema } from '../core/types'
-import type { Logger } from '../utils/logger'
+import type { AgentState, JsonSchema } from '@/core'
+import type { Logger } from '@/utils'
 
 export interface ToolDefinition<TInput = unknown> {
     readonly name: string

@@ -5,7 +5,7 @@
  * or returned as the final result.
  */
 
-import { defineTool } from '../types'
+import { defineTool } from '@/tools'
 
 export interface SetOutputInput {
     output: Record<string, unknown>

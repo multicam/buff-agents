@@ -2,8 +2,8 @@
  * Configuration Types
  */
 
-import type { ModelIdentifier } from '../core/types'
-import type { LLMProviderConfig } from '../llm/types'
+import type { ModelIdentifier } from '@/core'
+import type { LLMProviderConfig } from '@/llm'
 
 export interface BuffAgentsConfig {
     readonly providers?: {

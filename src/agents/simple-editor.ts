@@ -9,7 +9,7 @@ import { createAgent } from '@/core'
 export const simpleEditor = createAgent({
     id: 'simple-editor',
     displayName: 'Simple Editor',
-    model: 'anthropic/claude-sonnet-4',
+    model: 'anthropic/claude-sonnet-4-20250514',
 })
     .withTools(
         'read_files',

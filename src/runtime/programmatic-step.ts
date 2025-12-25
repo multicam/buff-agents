@@ -10,13 +10,13 @@ import type {
     StepYield,
     StepYieldResult,
     ToolCallYield,
-} from '../core/types'
-import { addMessage, addMessages } from '../core/types'
-import { assistantMessage } from '../core/types/messages'
-import type { ToolRegistry } from '../tools/registry'
-import { executeTools } from '../tools/executor'
-import type { ProjectContext, ToolEvent } from '../tools/types'
-import type { Logger } from '../utils/logger'
+} from '@/core'
+import { addMessage, addMessages } from '@/core'
+import { assistantMessage } from '@/core/types/messages'
+import type { ToolRegistry } from '@/tools'
+import { executeTools } from '@/tools/executor'
+import type { ProjectContext, ToolEvent } from '@/tools'
+import type { Logger } from '@/utils'
 import type { RuntimeEvent } from './events'
 
 export interface ProgrammaticStepContext {
