@@ -1,5 +1,10 @@
 .idea/
 node_modules/
 thoughts/
+dist/
+coverage/
+*.log
 
 .env
+.env.local
+.buff-agents.json
