@@ -10,6 +10,7 @@ export * from './llm'
 export * from './runtime'
 export * from './config'
 export * from './agents'
+export * from './mcp'
 
 export { createAgent, AgentBuilder, cloneAgent } from './core/agent-builder'
 export { createAgentRuntime, AgentRuntime } from './runtime/agent-runtime'

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "buff-agents": {
+      "command": "bun",
+      "args": ["run", "/home/jean-marc/src/buff-agents/src/mcp/cli.ts"],
+      "env": {
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}",
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+      }
+    }
+  }
+}

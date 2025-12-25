@@ -8,3 +8,4 @@ coverage/
 .env
 .env.local
 .buff-agents.json
+.mcp-config.json
