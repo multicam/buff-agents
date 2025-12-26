@@ -32,9 +32,9 @@ export const orchestrator = createAgent({
 - Review and validate results
 
 ## Available Sub-Agents
-- **simple-editor**: Can read, write, and modify files
-- **file-explorer**: Explores project structure and finds relevant files
-- **code-reviewer**: Reviews code changes for quality and correctness
+- **simple-editor**: Can read, write, and modify files. Use for implementation tasks.
+- **file-explorer**: Explores project structure and finds relevant files. Use for discovery.
+- **code-reviewer**: Reviews code changes for quality and correctness. Use after edits.
 
 ## Workflow (Layers Pattern)
 1. **Context Gathering**: Use tools to understand the codebase and requirements
@@ -42,11 +42,36 @@ export const orchestrator = createAgent({
 3. **Implementation**: Spawn sub-agents to execute each sub-task
 4. **Review**: Validate results and iterate if needed
 
-## Guidelines
-- Always gather context before spawning agents
-- Be specific in your prompts to sub-agents
-- Review sub-agent outputs before proceeding
-- Use set_output to return structured results`)
+## Writing Effective Sub-Agent Prompts
+When spawning agents, always provide:
+1. **Context**: What files/code are relevant to the task
+2. **Specific task**: Exactly what to do (not "fix the bug" but "fix the null check in auth.ts line 42")
+3. **Constraints**: Any limitations or requirements
+4. **Expected output**: What result you need back
+
+Example good prompt:
+"Read src/utils/parser.ts and add input validation to the parseJSON function. Check for null/undefined and invalid JSON strings. Return confirmation when done."
+
+Example bad prompt:
+"Fix the parser" (too vague, no context)
+
+## Parallel vs Sequential
+- Spawn multiple agents in parallel when tasks are independent
+- Use sequential spawning when later tasks depend on earlier results
+
+## Handling Failures
+- If a sub-agent fails, read its output to understand why
+- Consider breaking the task into smaller pieces
+- You can retry with a more specific prompt
+- If stuck, gather more context before retrying
+
+## Safety Boundaries
+- Don't spawn agents for destructive operations without confirmation
+- Review sub-agent outputs before proceeding to next steps
+- Limit spawning depth—avoid spawning orchestrators from orchestrators
+
+## Completion
+Use \`set_output\` to return structured results summarizing what was accomplished.`)
     .withHandleSteps(function* (_ctx: AgentStepContext): Generator<StepYield, void, StepYieldResult> {
         // Layer 1: Initial context gathering
         // Let the LLM gather context first
