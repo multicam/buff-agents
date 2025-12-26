@@ -43,6 +43,15 @@ export class CostTracker {
             ['openai/gpt-4o', { promptTokens: 2.5, completionTokens: 10 }],
             ['openai/gpt-4o-mini', { promptTokens: 0.15, completionTokens: 0.6 }],
             ['openai/gpt-4-turbo', { promptTokens: 10, completionTokens: 30 }],
+            // xAI (Grok)
+            ['xai/grok-2', { promptTokens: 2, completionTokens: 10 }],
+            ['xai/grok-2-vision', { promptTokens: 2, completionTokens: 10 }],
+            ['xai/grok-beta', { promptTokens: 5, completionTokens: 15 }],
+            // Perplexity
+            ['perplexity/sonar', { promptTokens: 1, completionTokens: 1 }],
+            ['perplexity/sonar-pro', { promptTokens: 3, completionTokens: 15 }],
+            ['perplexity/sonar-reasoning', { promptTokens: 1, completionTokens: 5 }],
+            ['perplexity/sonar-reasoning-pro', { promptTokens: 2, completionTokens: 8 }],
             // Google via OpenRouter
             ['openrouter/google/gemini-2.0-flash-001', { promptTokens: 0.1, completionTokens: 0.4 }],
             ['openrouter/google/gemini-pro', { promptTokens: 0.5, completionTokens: 1.5 }],

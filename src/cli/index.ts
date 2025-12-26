@@ -11,7 +11,7 @@ import { createLLMRegistry } from '@/llm'
 import { ToolRegistry } from '@/tools'
 import { builtinTools } from '@/tools/builtin'
 import { createAgentRuntime } from '@/runtime'
-import { simpleEditor, orchestrator, fileExplorer, codeReviewer, openaiEditor, openrouterEditor } from '@/agents'
+import { simpleEditor, orchestrator, fileExplorer, codeReviewer, openaiEditor, openrouterEditor, xaiEditor, perplexitySearch } from '@/agents'
 import { createLogger } from '@/utils'
 import type { RuntimeEvent } from '@/runtime'
 import type { AgentDefinition } from '@/core'
@@ -45,11 +45,15 @@ program
 
             const openaiKey = config.providers?.openai?.apiKey ?? process.env.OPENAI_API_KEY
             const openrouterKey = config.providers?.openrouter?.apiKey ?? process.env.OPENROUTER_API_KEY
+            const xaiKey = config.providers?.xai?.apiKey ?? process.env.XAI_API_KEY
+            const perplexityKey = config.providers?.perplexity?.apiKey ?? process.env.PERPLEXITY_API_KEY
 
             const llmRegistry = await createLLMRegistry({
                 anthropic: { apiKey: anthropicKey },
                 openai: openaiKey ? { apiKey: openaiKey } : undefined,
                 openrouter: openrouterKey ? { apiKey: openrouterKey } : undefined,
+                xai: xaiKey ? { apiKey: xaiKey } : undefined,
+                perplexity: perplexityKey ? { apiKey: perplexityKey } : undefined,
             })
 
             const toolRegistry = new ToolRegistry()
@@ -62,6 +66,8 @@ program
                 'code-reviewer': codeReviewer,
                 'openai-editor': openaiEditor,
                 'openrouter-editor': openrouterEditor,
+                'xai-editor': xaiEditor,
+                'perplexity-search': perplexitySearch,
             }
 
             const agent = agents[agentId]
@@ -116,6 +122,8 @@ program
         console.log('  simple-editor     - Basic file editing agent (Anthropic)')
         console.log('  openai-editor     - Basic file editing agent (OpenAI)')
         console.log('  openrouter-editor - Basic file editing agent (OpenRouter/Gemini)')
+        console.log('  xai-editor        - Basic file editing agent (xAI/Grok)')
+        console.log('  perplexity-search - Web search assistant (Perplexity)')
         console.log('  orchestrator      - Orchestrates complex tasks using sub-agents')
         console.log('  file-explorer     - Explores project structure and finds files')
         console.log('  code-reviewer     - Reviews code for quality and issues')

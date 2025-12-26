@@ -4,7 +4,7 @@ Autonomous coding agent library with base2-style orchestration.
 
 ## Features
 
-- **Multi-provider LLM support** - Anthropic, OpenAI, Google (via OpenRouter)
+- **Multi-provider LLM support** - Anthropic, OpenAI, xAI (Grok), Perplexity, Google (via OpenRouter)
 - **Tool system** - Schema-first tool definitions with JSON Schema validation
 - **Agent orchestration** - Spawn sub-agents for complex tasks
 - **Programmatic control** - `handleSteps` generator for custom workflows
@@ -63,6 +63,8 @@ buff-agents list
 #   simple-editor     - Basic file editing (Anthropic)
 #   openai-editor     - Basic file editing (OpenAI)
 #   openrouter-editor - Basic file editing (OpenRouter/Gemini)
+#   xai-editor        - Basic file editing (xAI/Grok)
+#   perplexity-search - Web search assistant (Perplexity)
 #   orchestrator      - Complex task orchestration
 #   file-explorer     - Project structure exploration
 #   code-reviewer     - Code quality review
@@ -77,6 +79,8 @@ Create `.buff-agents.json` in your project root:
   "providers": {
     "anthropic": { "apiKey": "sk-ant-..." },
     "openai": { "apiKey": "sk-..." },
+    "xai": { "apiKey": "xai-..." },
+    "perplexity": { "apiKey": "pplx-..." },
     "openrouter": { "apiKey": "sk-or-..." }
   },
   "defaultModel": "anthropic/claude-sonnet-4-20250514",
