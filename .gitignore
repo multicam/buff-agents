@@ -10,3 +10,10 @@ coverage/
 .buff-agents.json
 .mcp-config.json
 .prompts/
+tests/bench/results/
+
+# Benchmark artifacts
+tests/bench/results/*.json
+tests/bench/results/*.md
+!tests/bench/results/.gitkeep
+tests/bench/.workspace/

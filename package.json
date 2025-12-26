@@ -16,6 +16,7 @@
     "test": "bun test",
     "test:watch": "bun test --watch",
     "lint": "tsc --noEmit",
+    "bench": "bun run tests/bench/run.ts",
     "clean": "rm -rf dist node_modules",
     "prepublishOnly": "bun run build && bun run build:types"
   },
