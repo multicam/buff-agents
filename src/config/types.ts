@@ -11,6 +11,8 @@ export interface BuffAgentsConfig {
         readonly openai?: LLMProviderConfig
         readonly google?: LLMProviderConfig
         readonly openrouter?: LLMProviderConfig
+        readonly xai?: LLMProviderConfig
+        readonly perplexity?: LLMProviderConfig
     }
 
     readonly defaultModel?: ModelIdentifier

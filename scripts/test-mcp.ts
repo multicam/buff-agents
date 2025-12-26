@@ -55,9 +55,10 @@ async function main() {
         })
 
         console.log('📤 Result:')
-        for (const content of result.content) {
-            if (content.type === 'text') {
-                console.log(content.text)
+        const content = result.content as Array<{ type: string; text?: string }>
+        for (const item of content) {
+            if (item.type === 'text') {
+                console.log(item.text)
             }
         }
 

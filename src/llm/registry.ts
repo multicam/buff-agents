@@ -58,6 +58,8 @@ export interface LLMRegistryConfig {
     openai?: LLMProviderConfig
     google?: LLMProviderConfig
     openrouter?: LLMProviderConfig
+    xai?: LLMProviderConfig
+    perplexity?: LLMProviderConfig
 }
 
 export async function createLLMRegistry(config: LLMRegistryConfig): Promise<LLMRegistry> {
@@ -78,6 +80,16 @@ export async function createLLMRegistry(config: LLMRegistryConfig): Promise<LLMR
         const provider = createOpenRouterProvider(config.openrouter)
         registry.register(provider)
         registry.setFallback(provider)
+    }
+
+    if (config.xai?.apiKey) {
+        const { createXAIProvider } = await import('./providers/xai')
+        registry.register(createXAIProvider(config.xai))
+    }
+
+    if (config.perplexity?.apiKey) {
+        const { createPerplexityProvider } = await import('./providers/perplexity')
+        registry.register(createPerplexityProvider(config.perplexity))
     }
 
     return registry
