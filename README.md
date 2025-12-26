@@ -90,7 +90,23 @@ Create `.buff-agents.json` in your project root:
 
 ## MCP Integration (Cascade/Claude Code)
 
-Add to your MCP settings:
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/jean-marc/buff-agents.git ~/src/buff-agents
+cd ~/src/buff-agents
+
+# Install dependencies
+bun install
+```
+
+### Global Cascade Setup
+
+Add buff-agents to your **global** MCP settings so it's available in all workspaces:
+
+**Linux/macOS:** `~/.codeium/mcp_config.json`  
+**Windows:** `%APPDATA%\Codeium\mcp_config.json`
 
 ```json
 {
@@ -109,6 +125,31 @@ Add to your MCP settings:
   }
 }
 ```
+
+### Environment Variables
+
+Set your API keys in your shell profile (`~/.bashrc`, `~/.zshrc`, etc.):
+
+```bash
+export ANTHROPIC_API_KEY="sk-ant-..."
+export OPENAI_API_KEY="sk-..."
+export XAI_API_KEY="xai-..."
+export PERPLEXITY_API_KEY="pplx-..."
+export OPENROUTER_API_KEY="sk-or-..."
+```
+
+### Verify Installation
+
+Restart Cascade, then check the MCP server is running:
+- Open Cascade settings → MCP Servers
+- Look for "buff-agents" in the list
+- Status should show as connected
+
+### Available MCP Tools
+
+Once connected, Cascade can use buff-agents tools:
+- `run_agent` — Run any buff-agent with a prompt
+- `list_agents` — List available agents
 
 ## Built-in Tools
 
