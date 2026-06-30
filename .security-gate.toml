@@ -1,0 +1,39 @@
+# Supply-chain allowlist for buff-agents
+# Phase 5 mop-up — 2026-05-25
+# CVE-tagged packages (@hono/node-server, @modelcontextprotocol/sdk, hono@4.11.2,
+# path-to-regexp) are NOT allowlisted — upgrade those.
+
+[[allowlist]]
+package        = "call-bound"
+ecosystem      = "npm"
+reason         = "ljharb companion to call-bind; typo-distance FP"
+reviewed       = "2026-05-25"
+review_expires = "2026-08-26"
+
+[[allowlist]]
+package        = "depd"
+ecosystem      = "npm"
+reason         = "Deprecation utility (dougwilson/nodejs-depd); typo-distance FP vs gopd"
+reviewed       = "2026-05-25"
+review_expires = "2026-08-26"
+
+[[allowlist]]
+package        = "etag"
+ecosystem      = "npm"
+reason         = "Express ETag helper (jshttp/etag); typo-distance FP vs tap"
+reviewed       = "2026-05-25"
+review_expires = "2026-08-26"
+
+[[allowlist]]
+package        = "fresh"
+ecosystem      = "npm"
+reason         = "HTTP freshness helper (jshttp/fresh); typo-distance FP vs rush"
+reviewed       = "2026-05-25"
+review_expires = "2026-08-26"
+
+[[allowlist]]
+package        = "pump"
+ecosystem      = "npm"
+reason         = "mafintosh/pump stream pipe helper; typo-distance FP vs yup"
+reviewed       = "2026-05-25"
+review_expires = "2026-08-26"
