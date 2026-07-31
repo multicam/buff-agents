@@ -8,7 +8,7 @@
         "@anthropic-ai/sdk": "^0.30.0",
         "@modelcontextprotocol/sdk": "^1.26.0",
         "commander": "^12.0.0",
-        "fast-uri": "^3.1.2",
+        "fast-uri": "^3.1.4",
         "openai": "^4.70.0",
         "pino": "^9.0.0",
         "pino-pretty": "^11.0.0",
@@ -28,7 +28,7 @@
   },
   "overrides": {
     "@hono/node-server": ">=1.19.10",
-    "fast-uri": ">=3.1.2",
+    "fast-uri": ">=3.1.4",
     "form-data": ">=4.0.6 <5",
     "hono": ">=4.12.25 <5",
     "path-to-regexp": ">=8.4.0",
@@ -138,7 +138,7 @@
 
     "fast-safe-stringify": ["fast-safe-stringify@2.1.1", "", {}, "sha512-W+KJc2dmILlPplD/H4K9l9LcAHAfPtP6BY84uVLXQ6Evcz9Lcg33Y2z1IVblT6xdY54PXYVHEv+0Wpq8Io6zkA=="],
 
-    "fast-uri": ["fast-uri@3.1.2", "", {}, "sha512-rVjf7ArG3LTk+FS6Yw81V1DLuZl1bRbNrev6Tmd/9RaroeeRRJhAt7jg/6YFxbvAQXUCavSoZhPPj6oOx+5KjQ=="],
+    "fast-uri": ["fast-uri@4.1.2", "", {}, "sha512-TyGmBcbDTZXcb2cj5MV89DrF42DKvb3y5DDUNh95iO+IMeAzMkVSxK1PZRrRIpc9yg8U2GhGdbofNa0LS/a4Bw=="],
 
     "finalhandler": ["finalhandler@2.1.1", "", { "dependencies": { "debug": "^4.4.0", "encodeurl": "^2.0.0", "escape-html": "^1.0.3", "on-finished": "^2.4.1", "parseurl": "^1.3.3", "statuses": "^2.0.1" } }, "sha512-S8KoZgRZN+a5rNwqTxlZZePjT/4cnm0ROV70LedRHZ0p8u9fRID0hJUZQpkKLzro8LfmC8sx23bY6tVNxv8pQA=="],
 
